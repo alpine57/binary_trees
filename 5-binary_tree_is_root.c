@@ -1,22 +1,16 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_preorder - Goes through a binary tree using pre-order traversal
- * @tree: Pointer to the root node of the tree to traverse
- * @func: Pointer to a function to call for each node
+i * binary_tree_is_root - Checks if a node is  root of  binary tree.
+ * @node: pointer  the node to check.
  *
- * Description: Function traverses the binary tree using pre-order traversal
- *              and applies the given function to each node's value
+ * Return: If the node is a root 
  */
-void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
+int binary_tree_is_root(const binary_tree_t *node)
 {
-    if (tree == NULL || func == NULL)
-        return;
+	if (node == NULL || node->parent != NULL)
+		return (0);
 
-    func(tree->n);
-   
-    binary_tree_preorder(tree->left, func);
-   
-    binary_tree_preorder(tree->right, func);
+	return (1);
 }
 
