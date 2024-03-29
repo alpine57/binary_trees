@@ -30,6 +30,7 @@ typedef struct binary_tree_s avl_t;
 #include <stdio.h>
 #include <string.h>
 
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
 typedef struct binary_tree_s heap_t;
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
